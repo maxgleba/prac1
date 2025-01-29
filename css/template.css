@@ -1,8 +1,3 @@
-#content {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-}
 body {
     display: flex;
     align-items: center;
@@ -21,7 +16,9 @@ body {
 
 .image-section {
     width: 60%;
-    background: url('https://media.istockphoto.com/id/1172033601/photo/beautiful-woman-laughing.jpg') no-repeat center center;
+    background-image: url('https://source.unsplash.com/random/800x600');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
