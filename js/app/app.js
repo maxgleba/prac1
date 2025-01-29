@@ -1,4 +1,3 @@
-import "../css/template.css";
 import { router } from './router.js';
 import header from './widgets/header.js';
 import { search } from './widgets/search.js';
