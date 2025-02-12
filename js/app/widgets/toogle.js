@@ -1,13 +1,29 @@
-export const toogle = {
-    data() {
-        return {
-            state: false
-        };
+export var toogle = {
+    data: function() {
+      return {
+        value: ""
+      }
+    },
+    watch: {
+      modelValue: function(o, n) {
+        this.value = this.modelValue;
+      }
+    },
+    mounted() {
+      this.value = this.modelValue;
     },
     methods: {
-        toggle() {
-            this.state = !this.state;
-            console.log("Toggle state:", this.state);
-        }
-    }
-};
+      change() {
+        this.$emit('update:modelValue', this.value.toString());
+      }
+    },
+    props: {
+      modelValue: String
+    },
+    template: `
+      <label class="switch">
+        <input type="checkbox" v-model="value" @change="change()">
+        <span class="slider round"></span>
+      </label>
+    `
+  };
